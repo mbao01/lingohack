@@ -4165,6 +4165,13 @@
   dependencies:
     "ms" "2.0.0"
 
+"debug@^2.6.6":
+  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
+  "version" "2.6.9"
+  dependencies:
+    "ms" "2.0.0"
+
 "debug@^2.6.8":
   "integrity" "sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/debug/-/debug-2.6.9.tgz"
@@ -5678,6 +5685,11 @@
   "integrity" "sha1-3BXKHGcjh8p2vTesCjlbogQqLCg="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/get-value/-/get-value-2.0.6.tgz"
   "version" "2.0.6"
+
+"get-youtube-id@^1.0.0":
+  "integrity" "sha512-5yidLzoLXbtw82a/Wb7LrajkGn29BM6JuLWeHyNfzOGp1weGyW4+7eMz6cP23+etqj27VlOFtq8fFFDMLq/FXQ=="
+  "resolved" "https://registry.npmjs.org/get-youtube-id/-/get-youtube-id-1.0.1.tgz"
+  "version" "1.0.1"
 
 "getos@3.1.1":
   "integrity" "sha1-lnqBPM6v7gFWsEg/fP+ls+/wKcU="
@@ -7534,6 +7546,13 @@
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/kleur/-/kleur-3.0.3.tgz"
   "version" "3.0.3"
 
+"lamejs@^1.2.0":
+  "integrity" "sha512-s7bxvjvYthw6oPLCm5pFxvA84wUROODB8jEO2+CE1adhKgrIvVOlmMgY8zyugxGrvRaDHNJanOiS21/emty6dQ=="
+  "resolved" "https://registry.npmjs.org/lamejs/-/lamejs-1.2.1.tgz"
+  "version" "1.2.1"
+  dependencies:
+    "use-strict" "1.0.1"
+
 "launch-editor-middleware@^2.2.1":
   "integrity" "sha1-7dDtRaRvXxzydUD5M0a13p6MO+A="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/launch-editor-middleware/-/launch-editor-middleware-2.3.0.tgz"
@@ -7648,6 +7667,11 @@
     "parse-json" "^4.0.0"
     "pify" "^3.0.0"
     "strip-bom" "^3.0.0"
+
+"load-script@^1.0.0":
+  "integrity" "sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ="
+  "resolved" "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz"
+  "version" "1.0.0"
 
 "loader-fs-cache@^1.0.0":
   "integrity" "sha1-8IZXZG1gcHi+LwoDL4vWndbyd9k="
@@ -10553,6 +10577,11 @@
   dependencies:
     "is-arrayish" "^0.3.1"
 
+"sister@^3.0.0":
+  "integrity" "sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA=="
+  "resolved" "https://registry.npmjs.org/sister/-/sister-3.0.2.tgz"
+  "version" "3.0.2"
+
 "sisteransi@^1.0.5":
   "integrity" "sha1-E01oEpd1ZDfMBcoBNw06elcQde0="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/sisteransi/-/sisteransi-1.0.5.tgz"
@@ -11741,6 +11770,11 @@
     "punycode" "1.3.2"
     "querystring" "0.2.0"
 
+"use-strict@1.0.1":
+  "integrity" "sha1-C7gNlPSaSgUZK4Sox9NOlfGn46A="
+  "resolved" "https://registry.npmjs.org/use-strict/-/use-strict-1.0.1.tgz"
+  "version" "1.0.1"
+
 "use@^3.1.0":
   "integrity" "sha1-1QyMrHmhn7wg8pEfVuuXP04QBw8="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/use/-/use-3.1.1.tgz"
@@ -11856,6 +11890,13 @@
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/vm-browserify/-/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
+"vue-audio-recorder@^3.0.1":
+  "integrity" "sha512-qTEs5k0ewqyTzMTnffAnSAJW4NicQg2pQTonZtwwNnKjub34xKVt4gFTz+NPrL61KNQBZKEMQbEmwDrBmiPcOg=="
+  "resolved" "https://registry.npmjs.org/vue-audio-recorder/-/vue-audio-recorder-3.0.1.tgz"
+  "version" "3.0.1"
+  dependencies:
+    "lamejs" "^1.2.0"
+
 "vue-class-component@*", "vue-class-component@^7.2.3":
   "integrity" "sha1-hHHgN7jkdi9aRkaG4Z5a/HCFAuQ="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/vue-class-component/-/vue-class-component-7.2.6.tgz"
@@ -11956,7 +11997,15 @@
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.6.11", "vue@^2.6.4", "vue@^2.x", "vue@2.x":
+"vue-youtube@^1.4.0":
+  "integrity" "sha512-PCyfGAouSt6rTX0GLUzpdX2XC52zYf7a9mUhdp53jeDlPoU40hpsvyV3Zg2+947pvbv27ORcmtzm2fqO08kh9Q=="
+  "resolved" "https://registry.npmjs.org/vue-youtube/-/vue-youtube-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "get-youtube-id" "^1.0.0"
+    "youtube-player" "^5.4.0"
+
+"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.3.0", "vue@^2.6.11", "vue@^2.6.4", "vue@^2.x", "vue@2.x":
   "integrity" "sha1-5RqlJQJQ1Wmj+606ilpofWA24jU="
   "resolved" "https://artifacts.stageogip.ru:443/artifactory/api/npm/npm-inno/vue/-/vue-2.6.14.tgz"
   "version" "2.6.14"
@@ -12695,6 +12744,15 @@
     "is-ci" "^1.0.10"
     "normalize-path" "^1.0.0"
     "strip-indent" "^2.0.0"
+
+"youtube-player@^5.4.0":
+  "integrity" "sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ=="
+  "resolved" "https://registry.npmjs.org/youtube-player/-/youtube-player-5.5.2.tgz"
+  "version" "5.5.2"
+  dependencies:
+    "debug" "^2.6.6"
+    "load-script" "^1.0.0"
+    "sister" "^3.0.0"
 
 "zlibjs@^0.3.1":
   "integrity" "sha1-UBl+2yihxCymWcyLTmqd3W1ERVQ="

@@ -13,7 +13,7 @@
           <vs-select
             label="Mode"
             v-model="value"
-            style="width: 120px; margin-right: 20px"
+            style="width: 140px; margin-right: 20px"
           >
             <vs-option label="Simultaneous" value="1"> Simultaneous </vs-option>
             <vs-option label="Written" value="2"> Written </vs-option>

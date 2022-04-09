@@ -1,28 +1,6 @@
 <template>
   <div>
     <div class="exercise">
-      <!-- <vs-row
-        vs-type="flex"
-        style="margin: 20px 0; display: flex; justify-content: center"
-      >
-        <vs-col
-          vs-type="flex"
-          vs-justify="center"
-          vs-align="center"
-          w="6"
-          style="display: flex"
-        >
-          <figure>
-            <figcaption>Listen to the exercise:</figcaption>
-            <audio
-              controls
-              controlslist="nodownload"
-              preload
-              src="https://cdn.trendybeatz.com/audio/Fireboy-Peru-Remix-Ft-21-Savage-And-Blxst-(TrendyBeatz.com).mp3"
-            ></audio>
-          </figure>
-        </vs-col>
-      </vs-row> -->
       <div>
         <h2 style="margin: 0 0 10px 0">{{ exercise.title }}</h2>
         <div style="display: flex; justify-content: center">
@@ -45,7 +23,9 @@
         </div>
         <p style="padding-bottom: 20px">{{ exercise.subtitle }}</p>
       </div>
-      <div v-if="exercise.mode === 'simultaneous'">Simultaneous</div>
+      <div v-if="exercise.mode === 'simultaneous'">
+        <Booth :exercise="exercise" />
+      </div>
       <div v-if="exercise.mode === 'written'">
         <vs-row
           vs-type="flex"
@@ -132,30 +112,28 @@ Nicole Thomas
             >
           </vs-col>
         </vs-row>
-
-        <vs-row style="width: calc(100% + 40px); margin: 0 -20px">
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="12">
-            <vs-card
-              class="max-card summary"
-              type="3"
-              style="width: 100%; text-align: left"
-            >
-              <template #title style="font-size: 14px; margin-top: 10px">
-                <h3
-                  style="font-size: 18px; margin-top: 10px; text-align: center"
-                >
-                  Summary
-                </h3>
-              </template>
-              <template #text>
-                <p style="text-align: center; margin: 20px 0">
-                  Please click the Analyse to get a summary)
-                </p>
-              </template>
-            </vs-card>
-          </vs-col>
-        </vs-row>
       </div>
+
+      <vs-row>
+        <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="12">
+          <vs-card
+            class="max-card summary"
+            type="3"
+            style="width: 100%; text-align: left"
+          >
+            <template #title style="font-size: 14px; margin-top: 10px">
+              <h3 style="font-size: 18px; margin-top: 10px; text-align: center">
+                Summary
+              </h3>
+            </template>
+            <template #text>
+              <p style="text-align: center; margin: 20px 0">
+                Please click the Analyse to get a summary)
+              </p>
+            </template>
+          </vs-card>
+        </vs-col>
+      </vs-row>
     </div>
   </div>
 </template>
@@ -163,10 +141,12 @@ Nicole Thomas
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import NavBar from "@/components/NavBar.vue"; // @ is an alias to /src
+import Booth from "@/views/Booth.vue"; // @ is an alias to /src
 
 @Component({
   components: {
     NavBar,
+    Booth,
   },
 })
 export default class Exercise extends Vue {
@@ -175,6 +155,10 @@ export default class Exercise extends Vue {
   value = "1";
   exerciseId = this.$route.params.id;
   exercise = this.$store.state.exercises[this.exerciseId];
+
+  handleFileUpload = (e: Event) => {
+    console.log("E: ", e);
+  };
 }
 </script>
 

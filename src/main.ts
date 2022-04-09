@@ -4,9 +4,13 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import Vuesax from "vuesax";
+import AudioRecorder from "vue-audio-recorder";
+import VueYoutube from "vue-youtube";
 import "vuesax/dist/vuesax.css";
 
 Vue.use(Vuesax, {});
+Vue.use(AudioRecorder);
+Vue.use(VueYoutube);
 
 Vue.config.productionTip = false;
 

@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
       <img src="./assets/logo.svg" style="width: 160px" />
     </div>
     <router-view />
@@ -18,7 +16,7 @@
   color: #2c3e50;
   max-width: 1200px;
   margin: auto;
-  padding: 0 60px;
+  padding: 0 60px 60px;
 }
 
 #nav {
@@ -34,7 +32,8 @@
   }
 }
 
-.vs-select__options {
+.vs-select__options,
+.vs-tooltip {
   font-family: Sen, Helvetica, Arial, sans-serif !important;
 }
 </style>

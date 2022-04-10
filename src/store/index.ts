@@ -5,11 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    exercises: {
+    practises: {
       "1": {
         id: "1",
         type: "text",
-        title: "Exercise 1",
+        title: "Task 1",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
         isCompleted: false,
         mode: "written", // 'simultaneous'
@@ -21,7 +21,7 @@ export default new Vuex.Store({
       "2": {
         id: "2",
         type: "video",
-        title: "Exercise 2",
+        title: "Task 2",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
         isCompleted: false,
         mode: "simultaneous", // 'simultaneous'
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       "3": {
         id: "3",
         type: "audio",
-        title: "Exercise 3",
+        title: "Task 3",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
         isCompleted: false,
         mode: "simultaneous", // 'simultaneous'
@@ -51,7 +51,7 @@ export default new Vuex.Store({
       "4": {
         id: "4",
         type: "text",
-        title: "Exercise 4",
+        title: "Task 4",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
 
         isCompleted: true,
@@ -64,7 +64,7 @@ export default new Vuex.Store({
       "5": {
         id: "5",
         type: "text",
-        title: "Exercise 5",
+        title: "Task 5",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
 
         isCompleted: false,
@@ -77,7 +77,7 @@ export default new Vuex.Store({
       "6": {
         id: "6",
         type: "video",
-        title: "Exercise 6",
+        title: "Task 6",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
 
         isCompleted: false,
@@ -97,7 +97,7 @@ export default new Vuex.Store({
       "7": {
         id: "7",
         type: "text",
-        title: "Exercise 7",
+        title: "Task 7",
         subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
 
         isCompleted: false,

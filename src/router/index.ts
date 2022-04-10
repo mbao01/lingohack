@@ -1,26 +1,32 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
-import Exercise from "../views/Exercise.vue";
-import Booth from "../views/Booth.vue";
+import Practise from "../views/Practise.vue";
+import Task from "../views/Task.vue";
+import Landing from "@/views/Landing.vue";
+import Exercises from "@/views/Exercises.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Landing",
+    component: Landing,
   },
   {
-    path: "/exercise/:id",
-    name: "Exercise",
-    component: Exercise,
+    path: "/practise",
+    name: "Practise",
+    component: Practise,
   },
   {
-    path: "/booth/:id",
-    name: "Booth",
-    component: Booth,
+    path: "/exercises",
+    name: "Exercises",
+    component: Exercises,
+  },
+  {
+    path: "/exercises/:id",
+    name: "Task",
+    component: Task,
   },
   {
     path: "/about",

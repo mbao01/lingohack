@@ -1,23 +1,60 @@
 <template>
   <div style="margin: 20px 0; display: flex; justify-content: center">
     <div style="display: flex; flex: 1; justify-content: center">
-      <figure style="pointer-events: none">
+      <figure>
         <figcaption style="margin-bottom: 10px">
-          {{ exercise.subtitle }}
-          <br />
-          xxxx
+          <div
+            style="
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <vs-tooltip style="pointer-events: unset">
+              <i
+                class="bx bx-info-circle"
+                style="font-size: 20px; margin-right: 10px; cursor: pointer"
+              ></i>
+              <template #tooltip>
+                <div class="content-tooltip">
+                  <h4>{{ practise.event }}</h4>
+                  <p>
+                    {{ practise.description }}
+                  </p>
+                </div>
+              </template>
+            </vs-tooltip>
+            {{ practise.subtitle }}
+          </div>
+          <div style="font-style: italic">
+            {{ practise.authors }}
+          </div>
         </figcaption>
-        <div style="display: flex; justify-content: center">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            height: 378;
+            width: 100%;
+          "
+          v-if="!practise.type && !practise.meta"
+          ref="embed"
+        />
+        <div
+          style="display: flex; justify-content: center; pointer-events: none"
+          v-if="!(!practise.type && !practise.meta)"
+        >
           <youtube
-            v-if="exercise.type === 'video'"
-            :video-id="exercise.meta.rid"
+            v-if="practise.type === 'video' && practise.meta"
+            :video-id="practise.meta.rid"
             ref="youtube"
             :height="378"
             :player-vars="youtube"
           />
           <audio-player
             class="audio-player"
-            v-if="exercise.type === 'audio'"
+            v-if="practise.type === 'audio'"
             ref="audio"
             src="https://cdn.trendybeatz.com/audio/Fireboy-Peru-Remix-Ft-21-Savage-And-Blxst-(TrendyBeatz.com).mp3"
           />
@@ -109,8 +146,8 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Booth extends Vue {
-  @Prop() exercise!: any;
-  $refs!: { audio: any; youtube: any; recorder: any };
+  @Prop() practise!: any;
+  $refs!: { audio: any; youtube: any; recorder: any; embed: any };
   recorder = { attemptsLeft: 0, recordList: [] };
   recorderProps = { time: 0, attempts: 2 };
   youtube = {
@@ -126,12 +163,20 @@ export default class Booth extends Vue {
   record = null;
 
   async mounted() {
-    const time = await this.player.getMediaDuration();
-    this.recorder = await this.$refs.recorder;
-    this.recorderProps = {
-      ...this.recorderProps,
-      time: Number(parseFloat(String(time / 60)).toFixed(2)),
-    };
+    if (!this.$refs.embed) {
+      const time = await this.player.getMediaDuration();
+      this.recorder = await this.$refs.recorder;
+      this.recorderProps = {
+        ...this.recorderProps,
+        time: Number(parseFloat(String(time / 60)).toFixed(2)),
+      };
+    } else {
+      const link = this.practise.link.split("talks/")[1];
+      this.$refs.embed.innerHTML = `
+      <div style="width:664px;position:relative;max-height:378px;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/lang/en/${link}" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+      `;
+      console.log("Refs: ", this.$refs.embed.innerHTML);
+    }
   }
 
   private decoratedControls = (type: string) => {
@@ -158,7 +203,7 @@ export default class Booth extends Vue {
   };
 
   get player() {
-    return this.decoratedControls(this.exercise.type);
+    return this.decoratedControls(this.practise.type);
   }
 
   pauseRecording = async () => {
@@ -181,7 +226,9 @@ export default class Booth extends Vue {
     console.log("e: ", e);
   };
 
-  performAnalysis = () => {};
+  performAnalysis = () => {
+    console.log("Hi");
+  };
 }
 </script>
 

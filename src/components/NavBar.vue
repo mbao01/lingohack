@@ -1,16 +1,37 @@
 <template>
   <div class="nav-bar">
     <div class="section">
-      <vs-button :flat="active != 0" :active="active == 0" @click="active = 0"
-        >Exercises</vs-button
+      <router-link
+        to="/"
+        style="text-decoration: none; color: inherit"
+        v-if="!['/', '/exercises', '/practise'].includes($route.path)"
+        ><vs-button color="twitch"
+          ><i class="bx bxs-left-arrow-circle" style="margin-right: 5px"></i> Go
+          Back</vs-button
+        ></router-link
       >
-      <vs-button :flat="active != 1" :active="active == 1" @click="active = 1"
-        >Booth</vs-button
+      <router-link
+        to="/"
+        style="text-decoration: none; color: inherit"
+        v-if="['/', '/exercises', '/practise'].includes($route.path)"
+        ><vs-button
+          color="tumblr"
+          :active="$route.path === '/' || $route.path === '/practise'"
+        >
+          Practise
+        </vs-button></router-link
       >
+      <router-link
+        to="/exercises"
+        style="text-decoration: none; color: inherit"
+        v-if="['/', '/exercises', '/practise'].includes($route.path)"
+        :active="$route.path === '/exercises'"
+        ><vs-button color="tumblr"> Exercises </vs-button></router-link
+      >
+      &nbsp;
     </div>
-
     <div class="language">
-      <vs-button :active="false" @click="active = 0"
+      <vs-button :active="false" @click="active = 0" color="#109e92"
         >Eng <i class="bx bxs-right-arrow-circle"></i> Rus</vs-button
       >
     </div>
